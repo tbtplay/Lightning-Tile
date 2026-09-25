@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:theme="@android:style/Theme.DeviceDefault"
+        android:label="Lightning Tile"
+        android:allowBackup="false"
+        android:supportsRtl="true">
+
+        <service
+            android:name=".LightningTileService"
+            android:label="Lightning"
+            android:icon="@android:drawable/ic_menu_view"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+
+        </service>
+
+    </application>
+
+</manifest>
